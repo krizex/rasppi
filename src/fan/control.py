@@ -37,4 +37,4 @@ def get_temperature():
     return cpu_temp
 
 if __name__ == '__main__':
-    fan_control()
+    fan_control(50, 45)
