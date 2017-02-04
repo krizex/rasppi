@@ -17,6 +17,7 @@ def fan_control(threshold_on, threshold_off):
     FAN_GPIO = 4
 
     commands.getoutput('sudo gpio mode %s output' % str(FAN_GPIO))
+    commands.getoutput('sudo gpio write %s %s' % (str(FAN_GPIO), '0'))
 
     while True:
         cpu_temp = get_temperature()
